@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C173025C1B8664D600813755 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17302571B8664D600813755 /* IISideController.m */; };
+		C173025D1B8664D600813755 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17302591B8664D600813755 /* IIViewDeckController.m */; };
+		C173025E1B8664D600813755 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = C173025B1B8664D600813755 /* IIWrapController.m */; };
+		C17302631B86654D00813755 /* ViewDeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17302601B86654D00813755 /* ViewDeckController.swift */; };
+		C17302651B86654D00813755 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17302621B86654D00813755 /* RootViewController.swift */; };
+		C17302671B86673C00813755 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17302661B86673C00813755 /* ProfileViewController.swift */; };
+		C17302691B86689F00813755 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17302681B86689F00813755 /* RootNavigationController.swift */; };
+		C173026C1B871A7600813755 /* CommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173026B1B871A7600813755 /* CommunicationManager.swift */; };
+		C17C52901B86044E00AB45DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C528F1B86044E00AB45DB /* AppDelegate.swift */; };
+		C17C52921B86044E00AB45DB /* FindUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C52911B86044E00AB45DB /* FindUsersViewController.swift */; };
+		C17C52941B86044E00AB45DB /* ChatHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C52931B86044E00AB45DB /* ChatHistoryViewController.swift */; };
+		C17C52971B86044E00AB45DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17C52951B86044E00AB45DB /* Main.storyboard */; };
+		C17C52991B86044E00AB45DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17C52981B86044E00AB45DB /* Images.xcassets */; };
+		C17C529C1B86044E00AB45DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C17C529A1B86044E00AB45DB /* LaunchScreen.xib */; };
+		C17C52A81B86044E00AB45DB /* ActigageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C52A71B86044E00AB45DB /* ActigageTests.swift */; };
+		C1A74E721B87C5F0003B9368 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A74E701B87C5F0003B9368 /* BLE.m */; };
+		C1A74E751B887CDE003B9368 /* ActigageBLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A74E741B887CDE003B9368 /* ActigageBLE.swift */; };
+		C1A74E781B88D5E9003B9368 /* NearbyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A74E771B88D5E9003B9368 /* NearbyCell.swift */; };
+		C1A74E7A1B88F882003B9368 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A74E791B88F882003B9368 /* ChatViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C17C52A21B86044E00AB45DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C17C52821B86044E00AB45DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C17C52891B86044E00AB45DB;
+			remoteInfo = Actigage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C17302561B8664D600813755 /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
+		C17302571B8664D600813755 /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
+		C17302581B8664D600813755 /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		C17302591B8664D600813755 /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		C173025A1B8664D600813755 /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
+		C173025B1B8664D600813755 /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
+		C173025F1B86651200813755 /* Actigage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Actigage-Bridging-Header.h"; path = "../Actigage/Actigage-Bridging-Header.h"; sourceTree = "<group>"; };
+		C17302601B86654D00813755 /* ViewDeckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDeckController.swift; sourceTree = "<group>"; };
+		C17302621B86654D00813755 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		C17302661B86673C00813755 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C17302681B86689F00813755 /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		C173026B1B871A7600813755 /* CommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationManager.swift; sourceTree = "<group>"; };
+		C17302831B875E4700813755 /* Actigage copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Actigage copy-Info.plist"; path = "/Users/anya/Projects/Personal/Actigage/Actigage copy-Info.plist"; sourceTree = "<absolute>"; };
+		C17C528A1B86044E00AB45DB /* Actigage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actigage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17C528E1B86044E00AB45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C17C528F1B86044E00AB45DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C17C52911B86044E00AB45DB /* FindUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUsersViewController.swift; sourceTree = "<group>"; };
+		C17C52931B86044E00AB45DB /* ChatHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryViewController.swift; sourceTree = "<group>"; };
+		C17C52961B86044E00AB45DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C17C52981B86044E00AB45DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C17C529B1B86044E00AB45DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C17C52A11B86044E00AB45DB /* ActigageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActigageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17C52A61B86044E00AB45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C17C52A71B86044E00AB45DB /* ActigageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActigageTests.swift; sourceTree = "<group>"; };
+		C1A74E6F1B87C5F0003B9368 /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
+		C1A74E701B87C5F0003B9368 /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
+		C1A74E711B87C5F0003B9368 /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		C1A74E741B887CDE003B9368 /* ActigageBLE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActigageBLE.swift; sourceTree = "<group>"; };
+		C1A74E771B88D5E9003B9368 /* NearbyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyCell.swift; sourceTree = "<group>"; };
+		C1A74E791B88F882003B9368 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C17C52871B86044E00AB45DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C17C529E1B86044E00AB45DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C17302541B8664D600813755 /* External Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C173025F1B86651200813755 /* Actigage-Bridging-Header.h */,
+				C1A74E6E1B87C5F0003B9368 /* BLE */,
+				C17302551B8664D600813755 /* ViewDeck */,
+			);
+			path = "External Libraries";
+			sourceTree = SOURCE_ROOT;
+		};
+		C17302551B8664D600813755 /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				C17302561B8664D600813755 /* IISideController.h */,
+				C17302571B8664D600813755 /* IISideController.m */,
+				C17302581B8664D600813755 /* IIViewDeckController.h */,
+				C17302591B8664D600813755 /* IIViewDeckController.m */,
+				C173025A1B8664D600813755 /* IIWrapController.h */,
+				C173025B1B8664D600813755 /* IIWrapController.m */,
+			);
+			path = ViewDeck;
+			sourceTree = "<group>";
+		};
+		C173026A1B866BAA00813755 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C17302621B86654D00813755 /* RootViewController.swift */,
+				C17C52931B86044E00AB45DB /* ChatHistoryViewController.swift */,
+				C17C52911B86044E00AB45DB /* FindUsersViewController.swift */,
+				C17302661B86673C00813755 /* ProfileViewController.swift */,
+				C1A74E791B88F882003B9368 /* ChatViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C17C52811B86044E00AB45DB = {
+			isa = PBXGroup;
+			children = (
+				C17C528C1B86044E00AB45DB /* Actigage */,
+				C17C52A41B86044E00AB45DB /* ActigageTests */,
+				C17C528B1B86044E00AB45DB /* Products */,
+				C17302831B875E4700813755 /* Actigage copy-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		C17C528B1B86044E00AB45DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C17C528A1B86044E00AB45DB /* Actigage.app */,
+				C17C52A11B86044E00AB45DB /* ActigageTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C17C528C1B86044E00AB45DB /* Actigage */ = {
+			isa = PBXGroup;
+			children = (
+				C1A74E731B887CCA003B9368 /* Utilities */,
+				C1A74E761B88D5CC003B9368 /* Views */,
+				C173026A1B866BAA00813755 /* ViewControllers */,
+				C17C528F1B86044E00AB45DB /* AppDelegate.swift */,
+				C17302681B86689F00813755 /* RootNavigationController.swift */,
+				C17302601B86654D00813755 /* ViewDeckController.swift */,
+				C173026B1B871A7600813755 /* CommunicationManager.swift */,
+				C17C52951B86044E00AB45DB /* Main.storyboard */,
+				C17C52981B86044E00AB45DB /* Images.xcassets */,
+				C17C529A1B86044E00AB45DB /* LaunchScreen.xib */,
+				C17C528D1B86044E00AB45DB /* Supporting Files */,
+				C17302541B8664D600813755 /* External Libraries */,
+			);
+			path = Actigage;
+			sourceTree = "<group>";
+		};
+		C17C528D1B86044E00AB45DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C17C528E1B86044E00AB45DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C17C52A41B86044E00AB45DB /* ActigageTests */ = {
+			isa = PBXGroup;
+			children = (
+				C17C52A71B86044E00AB45DB /* ActigageTests.swift */,
+				C17C52A51B86044E00AB45DB /* Supporting Files */,
+			);
+			path = ActigageTests;
+			sourceTree = "<group>";
+		};
+		C17C52A51B86044E00AB45DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C17C52A61B86044E00AB45DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1A74E6E1B87C5F0003B9368 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				C1A74E6F1B87C5F0003B9368 /* BLE.h */,
+				C1A74E701B87C5F0003B9368 /* BLE.m */,
+				C1A74E711B87C5F0003B9368 /* BLEDefines.h */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		C1A74E731B887CCA003B9368 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C1A74E741B887CDE003B9368 /* ActigageBLE.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		C1A74E761B88D5CC003B9368 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1A74E771B88D5E9003B9368 /* NearbyCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C17C52891B86044E00AB45DB /* Actigage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C17C52AB1B86044E00AB45DB /* Build configuration list for PBXNativeTarget "Actigage" */;
+			buildPhases = (
+				C17C52861B86044E00AB45DB /* Sources */,
+				C17C52871B86044E00AB45DB /* Frameworks */,
+				C17C52881B86044E00AB45DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Actigage;
+			productName = Actigage;
+			productReference = C17C528A1B86044E00AB45DB /* Actigage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C17C52A01B86044E00AB45DB /* ActigageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C17C52AE1B86044E00AB45DB /* Build configuration list for PBXNativeTarget "ActigageTests" */;
+			buildPhases = (
+				C17C529D1B86044E00AB45DB /* Sources */,
+				C17C529E1B86044E00AB45DB /* Frameworks */,
+				C17C529F1B86044E00AB45DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C17C52A31B86044E00AB45DB /* PBXTargetDependency */,
+			);
+			name = ActigageTests;
+			productName = ActigageTests;
+			productReference = C17C52A11B86044E00AB45DB /* ActigageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C17C52821B86044E00AB45DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Anya;
+				TargetAttributes = {
+					C17C52891B86044E00AB45DB = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = FA5SV33YH5;
+					};
+					C17C52A01B86044E00AB45DB = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = C17C52891B86044E00AB45DB;
+					};
+				};
+			};
+			buildConfigurationList = C17C52851B86044E00AB45DB /* Build configuration list for PBXProject "Actigage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C17C52811B86044E00AB45DB;
+			productRefGroup = C17C528B1B86044E00AB45DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C17C52891B86044E00AB45DB /* Actigage */,
+				C17C52A01B86044E00AB45DB /* ActigageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C17C52881B86044E00AB45DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C17C52971B86044E00AB45DB /* Main.storyboard in Resources */,
+				C17C529C1B86044E00AB45DB /* LaunchScreen.xib in Resources */,
+				C17C52991B86044E00AB45DB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C17C529F1B86044E00AB45DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C17C52861B86044E00AB45DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C173025C1B8664D600813755 /* IISideController.m in Sources */,
+				C17302651B86654D00813755 /* RootViewController.swift in Sources */,
+				C1A74E751B887CDE003B9368 /* ActigageBLE.swift in Sources */,
+				C173026C1B871A7600813755 /* CommunicationManager.swift in Sources */,
+				C1A74E721B87C5F0003B9368 /* BLE.m in Sources */,
+				C17C52941B86044E00AB45DB /* ChatHistoryViewController.swift in Sources */,
+				C17302691B86689F00813755 /* RootNavigationController.swift in Sources */,
+				C173025D1B8664D600813755 /* IIViewDeckController.m in Sources */,
+				C17C52901B86044E00AB45DB /* AppDelegate.swift in Sources */,
+				C17302631B86654D00813755 /* ViewDeckController.swift in Sources */,
+				C17302671B86673C00813755 /* ProfileViewController.swift in Sources */,
+				C17C52921B86044E00AB45DB /* FindUsersViewController.swift in Sources */,
+				C1A74E781B88D5E9003B9368 /* NearbyCell.swift in Sources */,
+				C1A74E7A1B88F882003B9368 /* ChatViewController.swift in Sources */,
+				C173025E1B8664D600813755 /* IIWrapController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C17C529D1B86044E00AB45DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C17C52A81B86044E00AB45DB /* ActigageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C17C52A31B86044E00AB45DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C17C52891B86044E00AB45DB /* Actigage */;
+			targetProxy = C17C52A21B86044E00AB45DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C17C52951B86044E00AB45DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C17C52961B86044E00AB45DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C17C529A1B86044E00AB45DB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C17C529B1B86044E00AB45DB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C17C52A91B86044E00AB45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C17C52AA1B86044E00AB45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C17C52AC1B86044E00AB45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Actigage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		C17C52AD1B86044E00AB45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Actigage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		C17C52AF1B86044E00AB45DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ActigageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Actigage.app/Actigage";
+			};
+			name = Debug;
+		};
+		C17C52B01B86044E00AB45DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ActigageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Actigage.app/Actigage";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C17C52851B86044E00AB45DB /* Build configuration list for PBXProject "Actigage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C17C52A91B86044E00AB45DB /* Debug */,
+				C17C52AA1B86044E00AB45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C17C52AB1B86044E00AB45DB /* Build configuration list for PBXNativeTarget "Actigage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C17C52AC1B86044E00AB45DB /* Debug */,
+				C17C52AD1B86044E00AB45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C17C52AE1B86044E00AB45DB /* Build configuration list for PBXNativeTarget "ActigageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C17C52AF1B86044E00AB45DB /* Debug */,
+				C17C52B01B86044E00AB45DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C17C52821B86044E00AB45DB /* Project object */;
+}
