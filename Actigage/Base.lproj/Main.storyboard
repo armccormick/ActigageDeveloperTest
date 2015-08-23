@@ -37,6 +37,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="ToL-Ym-Kat" id="Wdy-wk-ZxT"/>
+                                    <segue destination="Nlc-Gw-1UF" kind="show" id="4BD-ga-Cuk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -51,6 +52,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="xQc-Jg-txD">
+            <objects>
+                <viewController id="Nlc-Gw-1UF" customClass="ChatViewController" customModule="Actigage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X2h-Lx-zMA"/>
+                        <viewControllerLayoutGuide type="bottom" id="42f-Pv-Rd8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HaV-fr-Uvl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59g-V3-q74" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="-320"/>
         </scene>
         <!--Chat History-->
         <scene sceneID="wg7-f3-ORb">

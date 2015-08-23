@@ -18,8 +18,25 @@ class ActigageBLE : BLE {
     override func centralManagerDidUpdateState(central: CBCentralManager) {
         actigageDelegate?.centralManagerDidUpdateState(central)
     }
+    
+    override func centralManager(central: CBCentralManager, didFailToConnectPeripheral peripheral: CBPeripheral, error: NSError?) {
+        NSLog("failed to connect to %@:", peripheral)
+        if (error != nil){
+            NSLog("%@", error!)
+        } else {
+            NSLog("Unknown Error")
+        }
+        actigageDelegate?.centralManagerFailedToConnect()
+    }
+    
+    func disconnect() {
+        if (activePeripheral != nil && activePeripheral.state == CBPeripheralState.Connected){
+            CM.cancelPeripheralConnection(activePeripheral)
+        }
+    }
 }
 
 protocol ActigageBLEDelegate : BLEDelegate  {
     func centralManagerDidUpdateState(central : CBCentralManager)
+    func centralManagerFailedToConnect()
 }
