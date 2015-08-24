@@ -12,7 +12,7 @@ class ViewDeckController : IIViewDeckController, IIViewDeckControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.centerController = self.storyboard?.instantiateViewControllerWithIdentifier("RootNavigationController") as UIViewController?
+        self.centerController = self.storyboard?.instantiateViewControllerWithIdentifier("RootViewController") as UIViewController?
         self.leftController = nil
         self.rightController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as UIViewController?
         self.delegate = self

@@ -40,42 +40,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        var title : String? = ""
-        
-        if #available(iOS 8.2, *) {
-            title = notification.alertTitle
-        } else {
-            title = "New Message"
-        }
-        let alert = UIAlertView(title: title, message: notification.alertBody, delegate: nil, cancelButtonTitle: "OK")
-        alert.show()
-    }
-
-//    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
-//        print("changed state")
-//        // We must construct a CLBeaconRegion that represents the payload we want the device to beacon.
-//        print("Setting up beacon")
-//        let uuid = NSUUID(UUIDString: "A8AA6B07-1485-4A0A-9FEC-468C8EF19ABC")
-//        
-//        if (uuid == nil) { print("uuid is nil") }
-//        
-//        let region = CLBeaconRegion(proximityUUID: uuid!, major: 42, minor: 666, identifier: "Actigage")
-//        let peripheralData : NSDictionary = region.peripheralDataWithMeasuredPower(nil)
-//
-//        if (peripheralManager == nil) { print("uuid is nil") }
-//        print(peripheralData)
-//
-//        // The region's peripheral data contains the CoreBluetooth-specific data we need to advertise.
-//        print("Starting beacon")
-//        if (peripheralManager!.state == CBPeripheralManagerState.PoweredOn){
-//            peripheralManager!.startAdvertising((peripheralData as! [String : AnyObject]))
-//            print("Started beacon")
-//        } else {
-//            print(peripheralManager!.state.rawValue)
-//            print("Did not start beacon")
-//        }
-//    }
-
 }
 

@@ -10,7 +10,7 @@ import UIKit
 import CoreBluetooth
 
 class FindUsersViewController: UITableViewController {
-    var nearbyList : [CBPeripheral] = []
+    var nearbyList : [User] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +21,18 @@ class FindUsersViewController: UITableViewController {
         self.parentViewController?.navigationItem.title = "Nearby"
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(true)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func updateNearby(){
         print("NOTIFICATION RECEIVED!!!")
-        nearbyList = CommunicationManager.sharedInstance.nearbyList
+        nearbyList = CommunicationManager.sharedInstance.nearbyUsers()
         tableView.reloadData()
     }
 
@@ -43,19 +47,29 @@ class FindUsersViewController: UITableViewController {
         
         let c : NearbyCell = cell as! NearbyCell
         
-        let user : CBPeripheral = nearbyList[indexPath.row]
+        let user : User = nearbyList[indexPath.row]
         
-        c.nameLabel?.text = user.name
+        c.nameLabel?.text = user.displayName
         
         return c
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController?
+        ActiveChatDataManager.sharedInstance.retrieveChatData(nearbyList[indexPath.row].uuid)
+        ActiveChatDataManager.sharedInstance.isCentral = true
         CommunicationManager.sharedInstance.connectToUser(nearbyList[indexPath.row])
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nearbyList.count
+    }
+    
+    @IBAction func buttonPressed(sender: UIButton) {
+        let viewDeck : IIViewDeckController? = self.navigationController?.parentViewController?.parentViewController as? IIViewDeckController
+        viewDeck?.openRightViewAnimated(true)
+        
     }
 
 }

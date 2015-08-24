@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Adds some useful methods to BLE class and its delegate
 class ActigageBLE : BLE {
     var actigageDelegate : ActigageBLEDelegate? {
         didSet {

@@ -16,6 +16,8 @@ class ProfileViewController : UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameField?.delegate = self
+        nameField?.text = CommunicationManager.sharedInstance.displayName
+        nameLabel?.text = CommunicationManager.sharedInstance.displayName
     }
         
     @IBAction func fieldChanged() {
@@ -27,17 +29,18 @@ class ProfileViewController : UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
-//        let viewDeck : IIViewDeckController? = self.parentViewController as? IIViewDeckController
-//        viewDeck?.closeRightViewAnimated(true)
         
         let editing = nameLabel?.hidden
         
         if (editing != nil && editing!) {
+            let name = nameField?.text
             nameLabel?.text = nameField?.text
             nameLabel?.hidden = false
             nameField?.resignFirstResponder()
             nameField?.hidden = true
             button?.setTitle("Edit", forState: UIControlState.Normal)
+            ActigageFileManager.sharedInstance.saveData(name, key: ActigageDataKey.UserDisplayName)
+            print(ActigageFileManager.sharedInstance.retrieveData(ActigageDataKey.UserDisplayName))
         } else {
             nameField?.text = nameLabel?.text
             nameField?.hidden = false
