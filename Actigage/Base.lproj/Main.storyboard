@@ -9,7 +9,7 @@
         <scene sceneID="kGv-Lk-9bJ">
             <objects>
                 <navigationController id="NTc-6O-M5N" userLabel="Nearby Nav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nearby" image="first" id="cCR-Mh-A7T"/>
+                    <tabBarItem key="tabBarItem" title="Nearby" image="nearby.png" selectedImage="nearby_selected.png" id="cCR-Mh-A7T"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F7P-pw-zwO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -178,7 +178,7 @@
         <scene sceneID="cbZ-V6-Phh">
             <objects>
                 <navigationController id="eha-nh-kSU" userLabel="History Nav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat History" image="second" id="rfQ-YQ-tWX"/>
+                    <tabBarItem key="tabBarItem" title="Chat History" image="history.png" selectedImage="history_selected.png" id="rfQ-YQ-tWX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Pa-pL-4bE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -286,7 +286,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="history.png" width="37" height="37"/>
+        <image name="history_selected.png" width="37" height="37"/>
+        <image name="nearby.png" width="37" height="37"/>
+        <image name="nearby_selected.png" width="37" height="37"/>
     </resources>
 </document>

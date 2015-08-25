@@ -10,22 +10,20 @@
 		C113877A1B89F6C100514403 /* ActigageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11387791B89F6C100514403 /* ActigageFileManager.swift */; };
 		C113877C1B8B2EBA00514403 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113877B1B8B2EBA00514403 /* HistoryCell.swift */; };
 		C113877F1B8B315500514403 /* UserChatHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113877E1B8B315500514403 /* UserChatHistory.swift */; };
-		C11844261B8C7D2500EA7208 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C11844251B8C7D2500EA7208 /* first.png */; };
 		C173025C1B8664D600813755 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17302571B8664D600813755 /* IISideController.m */; };
 		C173025D1B8664D600813755 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17302591B8664D600813755 /* IIViewDeckController.m */; };
 		C173025E1B8664D600813755 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = C173025B1B8664D600813755 /* IIWrapController.m */; };
 		C17302631B86654D00813755 /* ViewDeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17302601B86654D00813755 /* ViewDeckController.swift */; };
 		C17302651B86654D00813755 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17302621B86654D00813755 /* RootViewController.swift */; };
 		C17302671B86673C00813755 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17302661B86673C00813755 /* ProfileViewController.swift */; };
-		C17302691B86689F00813755 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17302681B86689F00813755 /* RootNavigationController.swift */; };
 		C173026C1B871A7600813755 /* CommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173026B1B871A7600813755 /* CommunicationManager.swift */; };
 		C17C52901B86044E00AB45DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C528F1B86044E00AB45DB /* AppDelegate.swift */; };
 		C17C52921B86044E00AB45DB /* FindUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C52911B86044E00AB45DB /* FindUsersViewController.swift */; };
 		C17C52941B86044E00AB45DB /* ChatHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C52931B86044E00AB45DB /* ChatHistoryViewController.swift */; };
 		C17C52971B86044E00AB45DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17C52951B86044E00AB45DB /* Main.storyboard */; };
-		C17C52991B86044E00AB45DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17C52981B86044E00AB45DB /* Images.xcassets */; };
 		C17C529C1B86044E00AB45DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C17C529A1B86044E00AB45DB /* LaunchScreen.xib */; };
 		C17C52A81B86044E00AB45DB /* ActigageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C52A71B86044E00AB45DB /* ActigageTests.swift */; };
+		C19B285F1B8CED1300321693 /* nearby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C19B285E1B8CED1300321693 /* nearby@2x.png */; };
 		C19D24961B8B5B4100F41C08 /* ActiveChatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D24951B8B5B4100F41C08 /* ActiveChatDataManager.swift */; };
 		C19D24981B8B8DA000F41C08 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D24971B8B8DA000F41C08 /* User.swift */; };
 		C1A74E721B87C5F0003B9368 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A74E701B87C5F0003B9368 /* BLE.m */; };
@@ -79,6 +77,9 @@
 		C1A74F0C1B88FC6E003B9368 /* JSQMessagesTypingIndicatorFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A74EDE1B88FC6E003B9368 /* JSQMessagesTypingIndicatorFooterView.m */; };
 		C1A74F0D1B88FC6E003B9368 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1A74EDF1B88FC6E003B9368 /* JSQMessagesTypingIndicatorFooterView.xib */; };
 		C1A74F0F1B88FCB6003B9368 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A74F0E1B88FCB6003B9368 /* AudioToolbox.framework */; };
+		C1B7C3EC1B8CF16A00631CAC /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1B7C3E91B8CF16A00631CAC /* history@2x.png */; };
+		C1B7C3ED1B8CF16A00631CAC /* history_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1B7C3EA1B8CF16A00631CAC /* history_selected@2x.png */; };
+		C1B7C3EE1B8CF16A00631CAC /* nearby_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1B7C3EB1B8CF16A00631CAC /* nearby_selected@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +96,6 @@
 		C11387791B89F6C100514403 /* ActigageFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActigageFileManager.swift; sourceTree = "<group>"; };
 		C113877B1B8B2EBA00514403 /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		C113877E1B8B315500514403 /* UserChatHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatHistory.swift; sourceTree = "<group>"; };
-		C11844251B8C7D2500EA7208 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		C17302561B8664D600813755 /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
 		C17302571B8664D600813755 /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
 		C17302581B8664D600813755 /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
@@ -106,7 +106,6 @@
 		C17302601B86654D00813755 /* ViewDeckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDeckController.swift; sourceTree = "<group>"; };
 		C17302621B86654D00813755 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C17302661B86673C00813755 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C17302681B86689F00813755 /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		C173026B1B871A7600813755 /* CommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationManager.swift; sourceTree = "<group>"; };
 		C17C528A1B86044E00AB45DB /* Actigage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actigage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17C528E1B86044E00AB45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,11 +113,11 @@
 		C17C52911B86044E00AB45DB /* FindUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUsersViewController.swift; sourceTree = "<group>"; };
 		C17C52931B86044E00AB45DB /* ChatHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryViewController.swift; sourceTree = "<group>"; };
 		C17C52961B86044E00AB45DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C17C52981B86044E00AB45DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C17C529B1B86044E00AB45DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C17C52A11B86044E00AB45DB /* ActigageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActigageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17C52A61B86044E00AB45DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C17C52A71B86044E00AB45DB /* ActigageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActigageTests.swift; sourceTree = "<group>"; };
+		C19B285E1B8CED1300321693 /* nearby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nearby@2x.png"; path = "Resources/nearby@2x.png"; sourceTree = "<group>"; };
 		C19D24951B8B5B4100F41C08 /* ActiveChatDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveChatDataManager.swift; sourceTree = "<group>"; };
 		C19D24971B8B8DA000F41C08 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C1A74E6F1B87C5F0003B9368 /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
@@ -220,6 +219,9 @@
 		C1A74EDE1B88FC6E003B9368 /* JSQMessagesTypingIndicatorFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQMessagesTypingIndicatorFooterView.m; sourceTree = "<group>"; };
 		C1A74EDF1B88FC6E003B9368 /* JSQMessagesTypingIndicatorFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSQMessagesTypingIndicatorFooterView.xib; sourceTree = "<group>"; };
 		C1A74F0E1B88FCB6003B9368 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C1B7C3E91B8CF16A00631CAC /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "history@2x.png"; path = "Resources/history@2x.png"; sourceTree = "<group>"; };
+		C1B7C3EA1B8CF16A00631CAC /* history_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "history_selected@2x.png"; path = "Resources/history_selected@2x.png"; sourceTree = "<group>"; };
+		C1B7C3EB1B8CF16A00631CAC /* nearby_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nearby_selected@2x.png"; path = "Resources/nearby_selected@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +255,10 @@
 		C11844241B8C7D0500EA7208 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C11844251B8C7D2500EA7208 /* first.png */,
+				C1B7C3E91B8CF16A00631CAC /* history@2x.png */,
+				C1B7C3EA1B8CF16A00631CAC /* history_selected@2x.png */,
+				C1B7C3EB1B8CF16A00631CAC /* nearby_selected@2x.png */,
+				C19B285E1B8CED1300321693 /* nearby@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -316,17 +321,15 @@
 		C17C528C1B86044E00AB45DB /* Actigage */ = {
 			isa = PBXGroup;
 			children = (
-				C11844241B8C7D0500EA7208 /* Resources */,
 				C113877D1B8B313D00514403 /* Models */,
 				C1A74E731B887CCA003B9368 /* Utilities */,
 				C1A74E761B88D5CC003B9368 /* Views */,
 				C173026A1B866BAA00813755 /* ViewControllers */,
 				C17C528F1B86044E00AB45DB /* AppDelegate.swift */,
-				C17302681B86689F00813755 /* RootNavigationController.swift */,
 				C17302601B86654D00813755 /* ViewDeckController.swift */,
 				C17C52951B86044E00AB45DB /* Main.storyboard */,
-				C17C52981B86044E00AB45DB /* Images.xcassets */,
 				C17C529A1B86044E00AB45DB /* LaunchScreen.xib */,
+				C11844241B8C7D0500EA7208 /* Resources */,
 				C17C528D1B86044E00AB45DB /* Supporting Files */,
 				C17302541B8664D600813755 /* External Libraries */,
 				C1A74F101B88FCF0003B9368 /* Frameworks */,
@@ -641,7 +644,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C11844261B8C7D2500EA7208 /* first.png in Resources */,
 				C1A74EE01B88FC6E003B9368 /* Info.plist in Resources */,
 				C1A74F011B88FC6E003B9368 /* JSQMessagesCollectionViewCellIncoming.xib in Resources */,
 				C1A74EE21B88FC6E003B9368 /* JSQMessagesAssets.bundle in Resources */,
@@ -649,9 +651,12 @@
 				C17C52971B86044E00AB45DB /* Main.storyboard in Resources */,
 				C17C529C1B86044E00AB45DB /* LaunchScreen.xib in Resources */,
 				C1A74F0D1B88FC6E003B9368 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
-				C17C52991B86044E00AB45DB /* Images.xcassets in Resources */,
+				C1B7C3EE1B8CF16A00631CAC /* nearby_selected@2x.png in Resources */,
+				C1B7C3EC1B8CF16A00631CAC /* history@2x.png in Resources */,
 				C1A74F0B1B88FC6E003B9368 /* JSQMessagesToolbarContentView.xib in Resources */,
+				C19B285F1B8CED1300321693 /* nearby@2x.png in Resources */,
 				C1A74EEC1B88FC6E003B9368 /* JSQMessagesViewController.xib in Resources */,
+				C1B7C3ED1B8CF16A00631CAC /* history_selected@2x.png in Resources */,
 				C1A74F081B88FC6E003B9368 /* JSQMessagesLoadEarlierHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,7 +704,6 @@
 				C113877A1B89F6C100514403 /* ActigageFileManager.swift in Sources */,
 				C1A74EE91B88FC6E003B9368 /* UIView+JSQMessages.m in Sources */,
 				C1A74EF51B88FC6E003B9368 /* JSQMessagesCollectionViewLayoutAttributes.m in Sources */,
-				C17302691B86689F00813755 /* RootNavigationController.swift in Sources */,
 				C1A74EE81B88FC6E003B9368 /* UIImage+JSQMessages.m in Sources */,
 				C1A74EEE1B88FC6E003B9368 /* JSQMessagesBubbleImageFactory.m in Sources */,
 				C173025D1B8664D600813755 /* IIViewDeckController.m in Sources */,

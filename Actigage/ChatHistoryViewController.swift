@@ -17,12 +17,13 @@ class ChatHistoryViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        chatHistoryList = CommunicationManager.sharedInstance.chatHistoryUsers()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         self.parentViewController?.navigationItem.title = "Chat History"
+
+        chatHistoryList = CommunicationManager.sharedInstance.chatHistoryUsers()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("peripheralMessage:"), name: CommunicationNotification.PeripheralReceivedMessage, object: nil)
 

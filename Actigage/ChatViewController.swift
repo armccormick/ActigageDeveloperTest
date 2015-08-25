@@ -26,14 +26,15 @@ class ChatViewController : JSQMessagesViewController {
         
         self.inputToolbar!.contentView!.leftBarButtonItem = nil
         
-        self.navigationItem.title = ActiveChatDataManager.sharedInstance.chatData?.user.displayName
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationItem.title = ActiveChatDataManager.sharedInstance.chatData?.user.displayName
+        self.collectionView?.reloadData()
+
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receivedMessage:"), name: CommunicationNotification.CentralReceivedMessage, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receivedMessage:"), name: CommunicationNotification.PeripheralReceivedMessage, object: nil)
-        
     }
 
     override func viewWillDisappear(animated: Bool) {

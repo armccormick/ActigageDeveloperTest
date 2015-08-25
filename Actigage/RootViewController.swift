@@ -14,6 +14,20 @@ class RootViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var nearbyItem = tabBar.items?[0]
+        var historyItem = tabBar.items?[1]
+        
+        nearbyItem!.image = UIImage(named: "nearby.png")?.imageWithRenderingMode(.AlwaysOriginal)
+        nearbyItem!.selectedImage = UIImage(named: "nearby_selected.png")?.imageWithRenderingMode(.AlwaysOriginal)
+        historyItem!.image = UIImage(named: "history.png")?.imageWithRenderingMode(.AlwaysOriginal)
+        historyItem!.selectedImage = UIImage(named: "history_selected.png")?.imageWithRenderingMode(.AlwaysOriginal)
+        
+        nearbyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( colorLiteralRed: 0.0, green: 0.388, blue: 0.388, alpha: 1.0)], forState: .Normal)
+        historyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( colorLiteralRed: 0.0, green: 0.388, blue: 0.388, alpha: 1.0)], forState: .Normal)
+
+        nearbyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( colorLiteralRed: 1.0, green: 0.588, blue: 0.251, alpha: 1.0)], forState: .Highlighted)
+        historyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( colorLiteralRed: 1.0, green: 0.588, blue: 0.251, alpha: 1.0)], forState: .Highlighted)
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("peripheralMessage:"), name: CommunicationNotification.PeripheralReceivedMessage, object: nil)
     }
     
@@ -33,7 +47,6 @@ class RootViewController: UITabBarController {
         }
     }
     
-    
     func peripheralMessage(notification : NSNotification){
         if let dictionary = notification.userInfo as? Dictionary<String,String> {
             let uuid = dictionary["uuid"]
@@ -44,10 +57,6 @@ class RootViewController: UITabBarController {
         if (newMessageUUIDs.count > 0){
             self.tabBar.items?[1].badgeValue = "\(newMessageUUIDs.count)"
         }
-    }
-    
-    func badgeCleared(notification : NSNotification){
-        newMessageUUIDs.removeAll()
     }
 }
 
