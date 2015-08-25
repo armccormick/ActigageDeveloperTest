@@ -40,7 +40,7 @@ class ProfileViewController : UIViewController, UITextFieldDelegate {
             nameField?.hidden = true
             button?.setTitle("Edit", forState: UIControlState.Normal)
             ActigageFileManager.sharedInstance.saveData(name, key: ActigageDataKey.UserDisplayName)
-            print(ActigageFileManager.sharedInstance.retrieveData(ActigageDataKey.UserDisplayName))
+
         } else {
             nameField?.text = nameLabel?.text
             nameField?.hidden = false

@@ -29,8 +29,6 @@ class ActigageFileManager : NSFileManager {
         if (!self.fileExistsAtPath((appSupportDirectory.path)!)){
             do {
                 try self.createDirectoryAtPath((appSupportDirectory.path)!, withIntermediateDirectories: true, attributes: nil)
-                print(self.fileExistsAtPath(appSupportDirectory.path!))
-                
             } catch let e as NSError {
                 NSLog("Problem creating App Support directory: %@", e)
             }
@@ -52,7 +50,7 @@ class ActigageFileManager : NSFileManager {
             return true
             
         } catch let error as NSError {
-            print(error)
+            NSLog("Problem writing data to file: %@", error)
             return false
         }
     }

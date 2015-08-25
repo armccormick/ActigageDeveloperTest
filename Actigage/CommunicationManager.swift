@@ -175,9 +175,8 @@ class CommunicationManager : NSObject, CBPeripheralManagerDelegate, ActigageBLED
     // Central Role Delegate Methods
     
     internal func centralManagerDidUpdateState(central: CBCentralManager) {
-        print(ble.CM.state)
         ble.findBLEPeripherals(3)
-        NSTimer.scheduledTimerWithTimeInterval(Double(3.0), target:self, selector: Selector("connectionTimer:"), userInfo:nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(Double(3.0), target:self, selector: Selector("connectionTimer:"), userInfo:nil, repeats: true)
     }
     
     internal func centralManagerFailedToConnect() {
@@ -202,6 +201,7 @@ class CommunicationManager : NSObject, CBPeripheralManagerDelegate, ActigageBLED
         let message : JSQMessage = JSQMessage(senderId: activePeripheralUUID(), senderDisplayName: ble.activePeripheral.name, date: NSDate(), text: s as? String)
         
         ActiveChatDataManager.sharedInstance.chatData?.messages.append(message)
+        ActiveChatDataManager.sharedInstance.chatData?.user.displayName = message.senderDisplayName
         saveAllMessages()
         
         let not = NSNotification(name: CommunicationNotification.CentralReceivedMessage, object: nil, userInfo: ["message" : message])
@@ -217,19 +217,22 @@ class CommunicationManager : NSObject, CBPeripheralManagerDelegate, ActigageBLED
             let notification = NSNotification(name: CommunicationNotification.NearbyListUpdated, object: nil, userInfo: nil)
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
+        ble.findBLEPeripherals(3)
     }
     
     func connectToUser(user:User) {
         var peripheral : CBPeripheral?
-        for p in ble.peripherals {
-            if (p.identifier.UUIDString == user.uuid){
-                peripheral = p as? CBPeripheral
+        if (ble.peripherals != nil) {
+            for p in ble.peripherals {
+                if (p.identifier.UUIDString == user.uuid){
+                    peripheral = p as? CBPeripheral
+                }
             }
-        }
-        if (peripheral != nil){
-            ble.connectPeripheral(peripheral)
-        } else {
-            // Tell user they can't connect
+            if (peripheral != nil){
+                ble.connectPeripheral(peripheral)
+            } else {
+                // Tell user they can't connect
+            }            
         }
     }
     
@@ -281,12 +284,9 @@ class CommunicationManager : NSObject, CBPeripheralManagerDelegate, ActigageBLED
             let service = CBMutableService(type: CBUUID(NSUUID: NSUUID(UUIDString: SERIVCE_UUID)!), primary: true)
             service.characteristics = [write, read]
             
-            print(service)
-
             peripheralManager!.addService(service)
             let data = [CBAdvertisementDataLocalNameKey : "iOS Chatter", CBAdvertisementDataServiceUUIDsKey : [CBUUID(NSUUID: NSUUID(UUIDString: SERIVCE_UUID)!)]]
             peripheralManager!.startAdvertising(data)
-            print(data)
 
             NSLog("Started advertising")
 
@@ -308,6 +308,7 @@ class CommunicationManager : NSObject, CBPeripheralManagerDelegate, ActigageBLED
         if (s == nil) {
             s = ""
         }
+        NSLog("Message is: %@", s!)
         
         let message = JSQMessage(senderId: sId, senderDisplayName: sName, date: NSDate(), text: s as! String)
         if (allMessages[sId] == nil){
@@ -316,6 +317,7 @@ class CommunicationManager : NSObject, CBPeripheralManagerDelegate, ActigageBLED
         }
         
         allMessages[sId]?.messages.append(message)
+        allMessages[sId]?.user.displayName = sName
         saveAllMessages()
         
         let not = NSNotification(name: CommunicationNotification.PeripheralReceivedMessage, object: nil, userInfo: ["uuid" : sId])

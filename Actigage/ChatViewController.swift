@@ -12,8 +12,6 @@ class ChatViewController : JSQMessagesViewController {
     
     private var outgoingImageData : JSQMessageBubbleImageDataSource?
     private var incomingImageData : JSQMessageBubbleImageDataSource?
-//    
-//    var messages = [JSQMessageData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,18 +22,29 @@ class ChatViewController : JSQMessagesViewController {
         
         let imageFactory : JSQMessagesBubbleImageFactory = JSQMessagesBubbleImageFactory()
         incomingImageData = imageFactory.incomingMessagesBubbleImageWithColor(UIColor.lightGrayColor())
-        outgoingImageData = imageFactory.outgoingMessagesBubbleImageWithColor(UIColor.greenColor())
+        outgoingImageData = imageFactory.outgoingMessagesBubbleImageWithColor(UIColor(colorLiteralRed: 0.0, green: 0.388, blue: 0.388, alpha: 1.0))
+        
+        self.inputToolbar!.contentView!.leftBarButtonItem = nil
+        
+        self.navigationItem.title = ActiveChatDataManager.sharedInstance.chatData?.user.displayName
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receivedMessage:"), name: CommunicationNotification.CentralReceivedMessage, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receivedMessage:"), name: CommunicationNotification.PeripheralReceivedMessage, object: nil)
+        
     }
 
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(true)
         NSNotificationCenter.defaultCenter().removeObserver(self)
         CommunicationManager.sharedInstance.disconnect()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.scrollToBottomAnimated(true)
     }
 
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
@@ -70,7 +79,6 @@ class ChatViewController : JSQMessagesViewController {
     }
     
     func receivedMessage(notification : NSNotification){
-        print("received message")
         self.finishReceivingMessageAnimated(true)
     }
 }

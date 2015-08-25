@@ -31,13 +31,11 @@ class FindUsersViewController: UITableViewController {
     }
     
     func updateNearby(){
-        print("NOTIFICATION RECEIVED!!!")
         nearbyList = CommunicationManager.sharedInstance.nearbyUsers()
         tableView.reloadData()
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("creating cell")
         let cellIdentifier = "NearbyCell"
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
         
@@ -55,17 +53,28 @@ class FindUsersViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController?
         ActiveChatDataManager.sharedInstance.retrieveChatData(nearbyList[indexPath.row].uuid)
-        ActiveChatDataManager.sharedInstance.isCentral = true
-        CommunicationManager.sharedInstance.connectToUser(nearbyList[indexPath.row])
+        
+        // If we're already connected, then we're in a peripheral role
+        if (CommunicationManager.sharedInstance.isConnectedToUser(nearbyList[indexPath.row])){
+            ActiveChatDataManager.sharedInstance.isCentral = false
+            
+            // If we're not already connected, we can connect as central
+        } else {
+            CommunicationManager.sharedInstance.connectToUser(nearbyList[indexPath.row])
+        }
+        
+        // TODO: We should show the user some feedback if they cannot connect
+        
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nearbyList.count
     }
-    
+
     @IBAction func buttonPressed(sender: UIButton) {
         let viewDeck : IIViewDeckController? = self.navigationController?.parentViewController?.parentViewController as? IIViewDeckController
         viewDeck?.openRightViewAnimated(true)

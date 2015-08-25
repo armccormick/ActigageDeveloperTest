@@ -10,6 +10,7 @@
 		C113877A1B89F6C100514403 /* ActigageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11387791B89F6C100514403 /* ActigageFileManager.swift */; };
 		C113877C1B8B2EBA00514403 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113877B1B8B2EBA00514403 /* HistoryCell.swift */; };
 		C113877F1B8B315500514403 /* UserChatHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113877E1B8B315500514403 /* UserChatHistory.swift */; };
+		C11844261B8C7D2500EA7208 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C11844251B8C7D2500EA7208 /* first.png */; };
 		C173025C1B8664D600813755 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17302571B8664D600813755 /* IISideController.m */; };
 		C173025D1B8664D600813755 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17302591B8664D600813755 /* IIViewDeckController.m */; };
 		C173025E1B8664D600813755 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = C173025B1B8664D600813755 /* IIWrapController.m */; };
@@ -94,6 +95,7 @@
 		C11387791B89F6C100514403 /* ActigageFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActigageFileManager.swift; sourceTree = "<group>"; };
 		C113877B1B8B2EBA00514403 /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		C113877E1B8B315500514403 /* UserChatHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatHistory.swift; sourceTree = "<group>"; };
+		C11844251B8C7D2500EA7208 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		C17302561B8664D600813755 /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
 		C17302571B8664D600813755 /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
 		C17302581B8664D600813755 /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
@@ -248,6 +250,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		C11844241B8C7D0500EA7208 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C11844251B8C7D2500EA7208 /* first.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		C17302541B8664D600813755 /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +316,7 @@
 		C17C528C1B86044E00AB45DB /* Actigage */ = {
 			isa = PBXGroup;
 			children = (
+				C11844241B8C7D0500EA7208 /* Resources */,
 				C113877D1B8B313D00514403 /* Models */,
 				C1A74E731B887CCA003B9368 /* Utilities */,
 				C1A74E761B88D5CC003B9368 /* Views */,
@@ -630,6 +641,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C11844261B8C7D2500EA7208 /* first.png in Resources */,
 				C1A74EE01B88FC6E003B9368 /* Info.plist in Resources */,
 				C1A74F011B88FC6E003B9368 /* JSQMessagesCollectionViewCellIncoming.xib in Resources */,
 				C1A74EE21B88FC6E003B9368 /* JSQMessagesAssets.bundle in Resources */,

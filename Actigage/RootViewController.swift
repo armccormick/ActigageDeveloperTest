@@ -13,9 +13,8 @@ class RootViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("peripheralMessage:"), name: CommunicationNotification.PeripheralReceivedMessage, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("badgeCleared:"), name: ChatHistoryNotification.BadgeCleared, object: nil)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -27,15 +26,23 @@ class RootViewController: UITabBarController {
         super.didReceiveMemoryWarning()
     }
     
+    override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        if (item == self.tabBar.items?[1]){
+            newMessageUUIDs.removeAll()
+            self.tabBar.items?[1].badgeValue = nil
+        }
+    }
+    
+    
     func peripheralMessage(notification : NSNotification){
         if let dictionary = notification.userInfo as? Dictionary<String,String> {
             let uuid = dictionary["uuid"]
-            if (uuid != nil && ActiveChatDataManager.sharedInstance.chatData?.user.uuid != uuid) {
+            if (uuid != nil && ActiveChatDataManager.sharedInstance.chatData?.user.uuid != uuid && tabBar.selectedItem != tabBar.items?[1]) {
                 newMessageUUIDs.insert(uuid!)
             }
         }
         if (newMessageUUIDs.count > 0){
-            self.tabBar.items?[1].badgeValue = "\(newMessageUUIDs.count)"            
+            self.tabBar.items?[1].badgeValue = "\(newMessageUUIDs.count)"
         }
     }
     

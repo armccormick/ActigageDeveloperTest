@@ -23,9 +23,6 @@ class ChatHistoryViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         self.parentViewController?.navigationItem.title = "Chat History"
-        self.tabBarItem.badgeValue = nil
-        let notification = NSNotification(name: ChatHistoryNotification.BadgeCleared, object: nil, userInfo: nil)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("peripheralMessage:"), name: CommunicationNotification.PeripheralReceivedMessage, object: nil)
 
@@ -42,7 +39,6 @@ class ChatHistoryViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("creating cell")
         let cellIdentifier = "HistoryCell"
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
         
@@ -57,14 +53,20 @@ class ChatHistoryViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController?
         ActiveChatDataManager.sharedInstance.retrieveChatData(chatHistoryList[indexPath.row].uuid)
         
+        // If we're already connected, then we're in a peripheral role
         if (CommunicationManager.sharedInstance.isConnectedToUser(chatHistoryList[indexPath.row])){
             ActiveChatDataManager.sharedInstance.isCentral = false
+            
+        // If we're not already connected, we can connect as central
         } else {
             CommunicationManager.sharedInstance.connectToUser(chatHistoryList[indexPath.row])
         }
+        
+        // TODO: We should show the user some feedback if they cannot connect
         
         self.navigationController?.pushViewController(vc!, animated: true)
     }
