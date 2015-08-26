@@ -176,7 +176,7 @@ class CommunicationManager : NSObject, CBPeripheralManagerDelegate, ActigageBLED
     
     internal func centralManagerDidUpdateState(central: CBCentralManager) {
         ble.findBLEPeripherals(3)
-        NSTimer.scheduledTimerWithTimeInterval(Double(3.0), target:self, selector: Selector("connectionTimer:"), userInfo:nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(Double(3.0), target:self, selector: Selector("connectionTimer:"), userInfo:nil, repeats: false)
     }
     
     internal func centralManagerFailedToConnect() {
@@ -218,6 +218,7 @@ class CommunicationManager : NSObject, CBPeripheralManagerDelegate, ActigageBLED
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
         ble.findBLEPeripherals(3)
+        NSTimer.scheduledTimerWithTimeInterval(Double(3.0), target:self, selector: Selector("connectionTimer:"), userInfo:nil, repeats: false)
     }
     
     func connectToUser(user:User) {
