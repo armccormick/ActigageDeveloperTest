@@ -22,7 +22,7 @@ class ChatViewController : JSQMessagesViewController {
         
         let imageFactory : JSQMessagesBubbleImageFactory = JSQMessagesBubbleImageFactory()
         incomingImageData = imageFactory.incomingMessagesBubbleImageWithColor(UIColor.lightGrayColor())
-        outgoingImageData = imageFactory.outgoingMessagesBubbleImageWithColor(UIColor(red: 0.0, green: 0.388, blue: 0.388, alpha: 1.0))
+        outgoingImageData = imageFactory.outgoingMessagesBubbleImageWithColor(UIColor(red: 0.36, green: 0.8, blue: 0.8, alpha: 1.0))
         
         self.inputToolbar!.contentView!.leftBarButtonItem = nil
         

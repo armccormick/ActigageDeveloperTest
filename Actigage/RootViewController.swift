@@ -55,7 +55,9 @@ class RootViewController: UITabBarController {
             }
         }
         if (newMessageUUIDs.count > 0){
-            self.tabBar.items?[1].badgeValue = "\(newMessageUUIDs.count)"
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tabBar.items?[1].badgeValue = "\(newMessageUUIDs.count)"
+            }
         }
     }
 }

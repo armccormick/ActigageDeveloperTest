@@ -14,7 +14,7 @@ class FindUsersViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("updateNearby"), name: CommunicationNotification.NearbyListUpdated, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("updateNearby:"), name: CommunicationNotification.NearbyListUpdated, object: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -30,9 +30,11 @@ class FindUsersViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func updateNearby(){
+    func updateNearby(notification : NSNotification){
         nearbyList = CommunicationManager.sharedInstance.nearbyUsers()
-        tableView.reloadData()
+        dispatch_async(dispatch_get_main_queue()) {
+            self.tableView.reloadData()
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

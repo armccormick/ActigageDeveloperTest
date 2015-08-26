@@ -25,7 +25,8 @@ class ChatHistoryViewController: UITableViewController {
 
         chatHistoryList = CommunicationManager.sharedInstance.chatHistoryUsers()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("peripheralMessage:"), name: CommunicationNotification.PeripheralReceivedMessage, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("messgeReceived:"), name: CommunicationNotification.PeripheralReceivedMessage, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("messgeReceived:"), name: CommunicationNotification.CentralReceivedMessage, object: nil)
 
     }
     
@@ -73,11 +74,14 @@ class ChatHistoryViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CommunicationManager.sharedInstance.chatHistoryUsers().count
+        return chatHistoryList.count
     }
 
-    func peripheralMessage(notification : NSNotification){
-        self.tableView.reloadData()
+    func messgeReceived(notification : NSNotification){
+        chatHistoryList = CommunicationManager.sharedInstance.chatHistoryUsers()
+        dispatch_async(dispatch_get_main_queue()) {
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
