@@ -90,7 +90,7 @@ class CommunicationManager : NSObject, CBPeripheralManagerDelegate, ActigageBLED
     // List of users for chat history list
     func chatHistoryUsers() -> [User] {
         var array : [User] = []
-        for key in allMessages.keys.array {
+        for key in allMessages.keys {
             if (allMessages[key] != nil && allMessages[key]!.messages.count > 0){
                 array.append(allMessages[key]!.user)
             }

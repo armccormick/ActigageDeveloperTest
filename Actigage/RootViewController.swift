@@ -22,11 +22,11 @@ class RootViewController: UITabBarController {
         historyItem!.image = UIImage(named: "history.png")?.imageWithRenderingMode(.AlwaysOriginal)
         historyItem!.selectedImage = UIImage(named: "history_selected.png")?.imageWithRenderingMode(.AlwaysOriginal)
         
-        nearbyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( colorLiteralRed: 0.0, green: 0.388, blue: 0.388, alpha: 1.0)], forState: .Normal)
-        historyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( colorLiteralRed: 0.0, green: 0.388, blue: 0.388, alpha: 1.0)], forState: .Normal)
+        nearbyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( red: 0.0, green: 0.388, blue: 0.388, alpha: 1.0)], forState: .Normal)
+        historyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( red: 0.0, green: 0.388, blue: 0.388, alpha: 1.0)], forState: .Normal)
 
-        nearbyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( colorLiteralRed: 1.0, green: 0.588, blue: 0.251, alpha: 1.0)], forState: .Highlighted)
-        historyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( colorLiteralRed: 1.0, green: 0.588, blue: 0.251, alpha: 1.0)], forState: .Highlighted)
+        nearbyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( red: 1.0, green: 0.588, blue: 0.251, alpha: 1.0)], forState: .Highlighted)
+        historyItem?.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor( red: 1.0, green: 0.588, blue: 0.251, alpha: 1.0)], forState: .Highlighted)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("peripheralMessage:"), name: CommunicationNotification.PeripheralReceivedMessage, object: nil)
     }
